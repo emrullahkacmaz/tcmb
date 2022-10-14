@@ -40,12 +40,47 @@ const HomeScreen = ({ user }) => {
 
  console.log("ne geliorrrr",searchText)
 
+
+ const orderHigh=()=>{
+ setData(
+   data
+      .slice()
+      .sort((a, b) => b.children[4].value - a.children[4].value)
+  );
+
+  setCrossData(
+    crossData
+       .slice()
+       .sort((a, b) => (b.children[7].value|| b.children[8].value) - (a.children[7].value|| a.children[8].value))
+   );
+
+ }
+
+ const orderLow=()=>{
+
+  setData(
+    data
+       .slice()
+       .sort((a, b) => a.children[4].value - b.children[4].value)
+   );
+   setCrossData(
+    crossData
+       .slice()
+       .sort((a, b) => (a.children[7].value|| a.children[8].value) - (b.children[7].value|| b.children[8].value))
+   );
+
+ }
+
  
   return  (
 
   ( user?
   <div>
+    <div style={{marginBottom:20, justifyContent:'space-between', flexDirection:'row', width:800, display:'flex'}}>
  <input type='text'   onChange={txt=> setSearchText(txt.target.value)}/>
+ <button onClick={orderHigh}> yüksek fiyata göre sırala</button>
+ <button onClick={orderLow}> düşük fiyata göre sırala</button>
+ </div>
     <CurrencyTableTitle/>
      <CurrencyTable data={data}  searchText={searchText}/>
     <CrossRateTitle/>

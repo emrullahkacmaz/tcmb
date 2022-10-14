@@ -8,7 +8,7 @@ const Header = ({ user, setUser }) => {
     }
   }, [user]);
   return (
-    <Navbar className="py-4 " bg="primary" expand="lg">
+    <Navbar style={{backgroundColor:'rgba(109,115,115)'}}>
       <Container>
     
         
