@@ -26,22 +26,26 @@ const HomeScreen = ({ user }) => {
      xml.children.splice(-1)
      setData(xml.children)
 
+     {searchText.length>0 && setData(xml.children.filter((item=> item.attributes.CurrencyCode.toLowerCase().includes(searchText.toLowerCase()) || item.children[1].value.toLowerCase().includes(searchText.toLowerCase()) )))}
+
      var crossdata= xml.children.filter(item => item.children[7].value.length>0 || item.children[8].value.length>0)
 
      setCrossData(crossdata)
+     {searchText.length>0 && setCrossData(xml.children.filter((item=> item.attributes.CurrencyCode.toLowerCase().includes(searchText.toLowerCase()) || item.children[1].value.toLowerCase().includes(searchText.toLowerCase()) )))}
+
   
   })
-  },[])
+  },[searchText])
 
 
- console.log("ne geliorrrr",sdr)
+ console.log("ne geliorrrr",searchText)
 
  
   return  (
 
   ( user?
   <div>
- <input  onChange={txt=> setSearchText(txt)}/>
+ <input type='text'   onChange={txt=> setSearchText(txt.target.value)}/>
     <CurrencyTableTitle/>
      <CurrencyTable data={data}  searchText={searchText}/>
     <CrossRateTitle/>

@@ -4,15 +4,14 @@ import React, { useEffect } from "react";
 const CurrencyTable = (props) => {
 
  const {data, searchText}=props
-
- const datam = data.filter(item=> item.attributes.CurrencyCode.includes(searchText))
+ 
 
  console.log("datam",data)
   return  (
 
     <div>
 
-{data &&  datam.map((item, key)=> 
+{data &&  data.map((item, key)=> 
 
 <div key={key} style={{flexDirection:'row', display:'flex', justifyContent:'flex-start', alignItems:'initial', backgroundColor: key%2===0 ? 'white': '#E5E5E5'}}> 
 
