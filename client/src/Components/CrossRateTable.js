@@ -4,7 +4,7 @@ import CurrencyFlag from 'react-currency-flags';
 
 const CrossRateTable = (props) => {
     const {data}= props
-    console.log("crossing",data)
+   
 
  
   return  (

@@ -26,7 +26,7 @@ const HomeScreen = ({ user }) => {
     .then(resp=> {
       var xml = new XMLParser().parseFromString(resp.data); 
       setSdr(xml.children[22])
-      console.log("asıl bilgi", xml.attributes)
+    
       setDate(xml.attributes)
      xml.children.splice(-1)
      setData(xml.children)
@@ -42,8 +42,7 @@ const HomeScreen = ({ user }) => {
   })
   },[searchText])
 
-
- console.log("ne geliorrrr",searchText)
+ 
 
 
  const orderHigh=()=>{

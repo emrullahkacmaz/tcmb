@@ -7,7 +7,7 @@ const CurrencyTable = (props) => {
  const {data, searchText}=props
  
 
- console.log("datam",data)
+
   return  (
 
     <div>
