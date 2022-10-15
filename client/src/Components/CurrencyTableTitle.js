@@ -13,7 +13,7 @@ const CurrencyTableTitle = (props) => {
 <div style={{flexDirection:'row', display:'flex', justifyContent:'flex-start', alignItems:'initial', backgroundColor:  '#E5E5E5', marginBottom:5, borderColor:'#3d3d3d',borderStyle:'groove', borderWidth:1, borderRadius:12}}> 
  
 
-<div style={{marginLeft:10,width:200}}>
+<div style={{marginLeft:10,width:190}}>
 
 <div style={{color:'black', fontFamily:'Roboto', fontSize:'16px', fontWeight:'bold'}}> Döviz Kodu</div>
   <div style={{color:'black', fontFamily:'Roboto', fontSize:'16px', fontWeight:'bold'}}>Currency Code</div>
@@ -21,7 +21,7 @@ const CurrencyTableTitle = (props) => {
 
 
 
-    <div style={{width:100}}>
+    <div style={{width:110}}>
     <div style={{color:'black', fontFamily:'Roboto', fontSize:'16px', fontWeight:'bold'}}>Birim</div>
   <div style={{color:'black', fontFamily:'Roboto', fontSize:'16px', fontWeight:'bold'}}>Unit</div>
     </div>

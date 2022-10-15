@@ -14,7 +14,7 @@ const CrossRateTitle = (props) => {
 
      
 
-<div style={{width:200, marginLeft:10}}>
+<div style={{width:180, marginLeft:10}}>
 
 <div style={{color:'black', fontFamily:'Roboto', fontSize:'16px', fontWeight:'bold'}}> Döviz Kodu</div>
   <div style={{color:'black', fontFamily:'Roboto', fontSize:'16px', fontWeight:'bold'}}>Currency Code</div>
@@ -26,7 +26,7 @@ const CrossRateTitle = (props) => {
     <div style={{color:'black', fontFamily:'Roboto', fontSize:'16px', fontWeight:'bold'}}>Birim</div>
   <div style={{color:'black', fontFamily:'Roboto', fontSize:'16px', fontWeight:'bold'}}>Unit</div>
     </div>
-    <div style={{width:320}}>
+    <div style={{width:315}}>
     <div style={{color:'black', fontFamily:'Roboto', fontSize:'16px', fontWeight:'bold'}}> Döviz Cinsi</div>
   <div style={{color:'black', fontFamily:'Roboto', fontSize:'16px', fontWeight:'bold'}}>Currency</div>
     </div>

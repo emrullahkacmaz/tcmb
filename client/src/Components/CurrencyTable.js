@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import CurrencyFlag from 'react-currency-flags';
  
 
 const CurrencyTable = (props) => {
@@ -16,9 +17,10 @@ const CurrencyTable = (props) => {
 <div key={key} style={{flexDirection:'row', display:'flex', justifyContent:'flex-start', alignItems:'initial', backgroundColor: key%2===0 ? 'white': '#E5E5E5'}}> 
 
      
-
-<div style={{marginLeft:10,width:200,color:'#3d3d3d', fontFamily:'Roboto', fontSize:'14px', fontWeight:600}}>{ item.attributes.CurrencyCode } / TRY</div>
-
+<div style={{flexDirection:'row', display:'flex',width:200}}> 
+<CurrencyFlag currency={item.attributes.CurrencyCode} width={22}  style={{marginTop:2}}/>
+<div style={{marginLeft:10,width:155,color:'#3d3d3d', fontFamily:'Roboto', fontSize:'14px', fontWeight:600}}>{ item.attributes.CurrencyCode } / TRY</div>
+</div>
 
 
     <div style={{width:100,color:'#3d3d3d', fontFamily:'Roboto', fontSize:'14px', fontWeight:600}}>{item.children[0].value}</div>

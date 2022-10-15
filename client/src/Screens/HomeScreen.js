@@ -81,12 +81,12 @@ const HomeScreen = ({ user }) => {
 
   ( user?
   <div style={{diplay:'flex'}}>
-     <div  style={{ marginLeft:10,marginBottom:20, fontFamily:'Roboto', fontSize:'16px', fontWeight:'bold',borderRadius:12,color:'#3d3d3d', backgroundColor:'white', borderColor:'#E5E5E5', borderWidth:3}} >{date.Tarih} Günü Saat 15:30'da Belirlenen Gösterge Niteliğindeki Türkiye Cumhuriyet Merkez Bankası Kurları
+     <div  style={{ marginLeft:10,marginBottom:20, fontFamily:'Roboto', fontSize:'18px', fontWeight:'bold',borderRadius:12,color:'#3d3d3d', backgroundColor:'white', borderColor:'#E5E5E5', borderWidth:3}} >{date.Tarih} Günü Saat 15:30'da Belirlenen Gösterge Niteliğindeki Türkiye Cumhuriyet Merkez Bankası Kurları
 Indicative Exchange Rates Announced at 15:30 on {date.Date} by the Central Bank of Turkey
 Bülten No:{date.Bulten_No}</div>
     <div style={{marginBottom:20, justifyContent:'space-between', flexDirection:'row', width:800, display:'flex'}}>
    <div style={{flexDirection:'row'}}>
-    <img src={search} alt='Canvas'  style={{ width:23, height:23}}/>
+    <img src={search} alt='Canvas'  style={{ width:23, height:23,marginLeft:10}}/>
 
  <input style={{paddingLeft:10, borderRadius:12,marginLeft:5,  borderColor:'#E5E5E5', borderWidth:3}} type='text'   onChange={txt=> setSearchText(txt.target.value)}/>
  </div>
