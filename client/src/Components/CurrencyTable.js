@@ -17,17 +17,17 @@ const CurrencyTable = (props) => {
 
      
 
-<div style={{width:200}}>{ item.attributes.CurrencyCode } / TRY</div>
+<div style={{marginLeft:10,width:200,color:'#3d3d3d', fontFamily:'Roboto', fontSize:'14px', fontWeight:600}}>{ item.attributes.CurrencyCode } / TRY</div>
 
 
 
-    <div style={{width:100}}>{item.children[0].value}</div>
-    <div style={{width:350}}>{item.children[1].value}</div>
+    <div style={{width:100,color:'#3d3d3d', fontFamily:'Roboto', fontSize:'14px', fontWeight:600}}>{item.children[0].value}</div>
+    <div style={{width:350,color:'#3d3d3d', fontFamily:'Roboto', fontSize:'14px', fontWeight:600}}>{item.children[1].value}</div>
  
-    <div style={{width:150}}>{item.children[3].value}</div>
-    <div style={{width:150}}>{item.children[4].value}</div>
-    <div style={{width:150}}>{item.children[5].value}</div>
-    <div style={{width:150}}>{item.children[6].value}</div>
+    <div style={{width:150,color:'#3d3d3d', fontFamily:'Roboto', fontSize:'14px', fontWeight:600}}>{item.children[3].value}</div>
+    <div style={{width:150,color:'#3d3d3d', fontFamily:'Roboto', fontSize:'14px', fontWeight:600}}>{item.children[4].value}</div>
+    <div style={{width:150,color:'#3d3d3d', fontFamily:'Roboto', fontSize:'14px', fontWeight:600}}>{item.children[5].value}</div>
+    <div style={{width:150,color:'#3d3d3d', fontFamily:'Roboto', fontSize:'14px', fontWeight:600}}>{item.children[6].value}</div>
 
 
 </div>)}

@@ -47,7 +47,7 @@ const SignUpScreen = () => {
                 placeholder="Enter email"
               />
             </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Group className="mb-3" controlId="formBasicPassword" >
               <Form.Label>Password</Form.Label>
               <Form.Control
                 onChange={(e) =>
@@ -60,7 +60,7 @@ const SignUpScreen = () => {
            
           
             <Form.Group className="d-grid">
-              <Button variant="primary" type="submit" className="mt-4">
+              <Button variant="primary" type="submit" className="mt-4" style={{backgroundColor:'#3d3d3d', borderColor:'#E5E5E5'}}>
                 <Link className="text-white text-decoration-none" to="/signin">
                   Sign Up
                 </Link>

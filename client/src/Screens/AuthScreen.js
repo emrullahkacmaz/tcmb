@@ -49,11 +49,11 @@ const AuthScreen = ({ setUser }) => {
             </Form.Group>
 
             <Form.Group className="d-grid">
-              <Button type="submit" variant="primary" size="lg">
+              <Button type="submit" variant="primary" size="lg"  style={{backgroundColor:'#3d3d3d', borderColor:'#E5E5E5'}}>
                 Sign In
               </Button>
               <Form.Text className="text-center mt-2">
-                Don't have an account? <Link to="/signup">Sign Up</Link>
+                Don't have an account? <Link to="/signup"  style={{color:'#3d3d3d', fontWeight:'bold' }}>Sign Up</Link>
               </Form.Text>
             </Form.Group>
           </Form>

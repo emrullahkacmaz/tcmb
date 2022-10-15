@@ -8,13 +8,12 @@ const Header = ({ user, setUser }) => {
     }
   }, [user]);
   return (
-    <Navbar style={{backgroundColor:'rgba(109,115,115)'}}>
+    <Navbar className="py-4 "  style={{backgroundColor:'#3d3d3d'}}>
       <Container>
-    
+        <Navbar.Brand className="text-white">{user? user.fullname : ''} Hoşgeldiniz</Navbar.Brand>
         
+       
         {user ? (
-          <div style={{flexDirection:'row'}}>
-            <div>   hoşgeldiniz {user?.fullname}  </div>
           <Button
             variant="outline-light"
             onClick={(e) => {
@@ -25,10 +24,6 @@ const Header = ({ user, setUser }) => {
             {" "}
             Çıkış yap{" "}
           </Button>
-          
-          </div>
-          
-        
         ) : (
           <Button variant="outline-light">
             <Link className="text-white text-decoration-none" to="/signin">

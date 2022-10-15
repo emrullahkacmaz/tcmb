@@ -10,42 +10,41 @@ const CurrencyTableTitle = (props) => {
 
  
 
-<div style={{flexDirection:'row', display:'flex', justifyContent:'flex-start', alignItems:'initial', backgroundColor:  '#E5E5E5', marginBottom:5}}> 
+<div style={{flexDirection:'row', display:'flex', justifyContent:'flex-start', alignItems:'initial', backgroundColor:  '#E5E5E5', marginBottom:5, borderColor:'#3d3d3d',borderStyle:'groove', borderWidth:1, borderRadius:12}}> 
+ 
 
-     
+<div style={{marginLeft:10,width:200}}>
 
-<div style={{width:200}}>
-
-<div> Döviz Kodu</div>
-  <div>Currency Code</div>
+<div style={{color:'black', fontFamily:'Roboto', fontSize:'16px', fontWeight:'bold'}}> Döviz Kodu</div>
+  <div style={{color:'black', fontFamily:'Roboto', fontSize:'16px', fontWeight:'bold'}}>Currency Code</div>
 </div>
 
 
 
     <div style={{width:100}}>
-    <div>Birim</div>
-  <div>Unit</div>
+    <div style={{color:'black', fontFamily:'Roboto', fontSize:'16px', fontWeight:'bold'}}>Birim</div>
+  <div style={{color:'black', fontFamily:'Roboto', fontSize:'16px', fontWeight:'bold'}}>Unit</div>
     </div>
     <div style={{width:350}}>
-    <div> Döviz Cinsi</div>
-  <div>Currency</div>
+    <div style={{color:'black', fontFamily:'Roboto', fontSize:'16px', fontWeight:'bold'}}> Döviz Cinsi</div>
+  <div style={{color:'black', fontFamily:'Roboto', fontSize:'16px', fontWeight:'bold'}}>Currency</div>
     </div>
  
     <div style={{width:150}}>
-    <div> Döviz Alış</div>
-  <div>Forex Buying</div>
+    <div style={{color:'black', fontFamily:'Roboto', fontSize:'16px', fontWeight:'bold'}}> Döviz Alış</div>
+  <div style={{color:'black', fontFamily:'Roboto', fontSize:'16px', fontWeight:'bold'}}>Forex Buying</div>
     </div>
     <div style={{width:150}}>
-    <div> Döviz Satış</div>
-  <div>Forex Selling</div>
+    <div style={{color:'black', fontFamily:'Roboto', fontSize:'16px', fontWeight:'bold'}}> Döviz Satış</div>
+  <div style={{color:'black', fontFamily:'Roboto', fontSize:'16px', fontWeight:'bold'}}>Forex Selling</div>
     </div>
     <div style={{width:150}}>
-    <div> Efektif Alış</div>
-  <div>Banknote Buying</div>
+    <div style={{color:'black', fontFamily:'Roboto', fontSize:'16px', fontWeight:'bold'}}> Efektif Alış</div>
+  <div style={{color:'black', fontFamily:'Roboto', fontSize:'16px', fontWeight:'bold'}}>Banknote Buying</div>
     </div>
     <div style={{width:150}}>
-    <div> Efektif Satış</div>
-  <div>Banknote Selling</div>
+    <div style={{color:'black', fontFamily:'Roboto', fontSize:'16px', fontWeight:'bold'}}> Efektif Satış</div>
+  <div style={{color:'black', fontFamily:'Roboto', fontSize:'16px', fontWeight:'bold'}}>Banknote Selling</div>
     </div>
 
 

@@ -6,6 +6,8 @@ import CurrencyTableTitle from "../Components/CurrencyTableTitle";
 import CrossRateTitle from "../Components/CrossRateTitle";
 import CrossRateTable from "../Components/CrossRateTable";
 import SpecialDrawing from "../Components/SpecialDrawing";
+import logo from '../assets/tcm.jpg'
+import search from '../assets/searchVector.png'
 
 const HomeScreen = ({ user }) => {
 
@@ -75,11 +77,15 @@ const HomeScreen = ({ user }) => {
   return  (
 
   ( user?
-  <div>
+  <div style={{diplay:'flex'}}>
     <div style={{marginBottom:20, justifyContent:'space-between', flexDirection:'row', width:800, display:'flex'}}>
- <input type='text'   onChange={txt=> setSearchText(txt.target.value)}/>
- <button onClick={orderHigh}> yüksek fiyata göre sırala</button>
- <button onClick={orderLow}> düşük fiyata göre sırala</button>
+   <div style={{flexDirection:'row'}}>
+    <img src={search} alt='Canvas'  style={{ width:23, height:23}}/>
+
+ <input style={{paddingLeft:10, borderRadius:12,marginLeft:5,  borderColor:'#E5E5E5', borderWidth:3}} type='text'   onChange={txt=> setSearchText(txt.target.value)}/>
+ </div>
+ <button style={{fontFamily:'Roboto', fontSize:'16px', fontWeight:'bold',borderRadius:12, color:'#3d3d3d', backgroundColor:'white', borderColor:'#E5E5E5', borderWidth:3}} onClick={orderHigh}> Yüksek Fiyata Göre Sırala</button>
+ <button style={{fontFamily:'Roboto', fontSize:'16px', fontWeight:'bold',borderRadius:12,color:'#3d3d3d', backgroundColor:'white', borderColor:'#E5E5E5', borderWidth:3}} onClick={orderLow}> Düşük Fiyata Göre Sırala</button>
  </div>
     <CurrencyTableTitle/>
      <CurrencyTable data={data}  searchText={searchText}/>
@@ -87,7 +93,9 @@ const HomeScreen = ({ user }) => {
     <CrossRateTable data={crossData}/>
     <SpecialDrawing  data={sdr}  />
      
-     </div> : null)
+     </div> :
+     <img src={logo} alt='Canvas'  style={{marginTop:15, marginLeft:'10%', display:'flex', width:'80%', height:'70%'}}/>
+     )
   )
   
  
