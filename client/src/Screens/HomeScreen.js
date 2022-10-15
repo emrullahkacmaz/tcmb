@@ -13,6 +13,7 @@ const HomeScreen = ({ user }) => {
 
 
   const [data, setData]=useState([]);
+  const [date, setDate]=useState([]);
   const [sdr, setSdr]=useState();
   const [crossData, setCrossData]=useState([]);
   const [searchText, setSearchText]=useState('');
@@ -25,6 +26,8 @@ const HomeScreen = ({ user }) => {
     .then(resp=> {
       var xml = new XMLParser().parseFromString(resp.data); 
       setSdr(xml.children[22])
+      console.log("asıl bilgi", xml.attributes)
+      setDate(xml.attributes)
      xml.children.splice(-1)
      setData(xml.children)
 
@@ -78,6 +81,9 @@ const HomeScreen = ({ user }) => {
 
   ( user?
   <div style={{diplay:'flex'}}>
+     <div  style={{ marginLeft:10,marginBottom:20, fontFamily:'Roboto', fontSize:'16px', fontWeight:'bold',borderRadius:12,color:'#3d3d3d', backgroundColor:'white', borderColor:'#E5E5E5', borderWidth:3}} >{date.Tarih} Günü Saat 15:30'da Belirlenen Gösterge Niteliğindeki Türkiye Cumhuriyet Merkez Bankası Kurları
+Indicative Exchange Rates Announced at 15:30 on {date.Date} by the Central Bank of Turkey
+Bülten No:{date.Bulten_No}</div>
     <div style={{marginBottom:20, justifyContent:'space-between', flexDirection:'row', width:800, display:'flex'}}>
    <div style={{flexDirection:'row'}}>
     <img src={search} alt='Canvas'  style={{ width:23, height:23}}/>
@@ -87,6 +93,7 @@ const HomeScreen = ({ user }) => {
  <button style={{fontFamily:'Roboto', fontSize:'16px', fontWeight:'bold',borderRadius:12, color:'#3d3d3d', backgroundColor:'white', borderColor:'#E5E5E5', borderWidth:3}} onClick={orderHigh}> Yüksek Fiyata Göre Sırala</button>
  <button style={{fontFamily:'Roboto', fontSize:'16px', fontWeight:'bold',borderRadius:12,color:'#3d3d3d', backgroundColor:'white', borderColor:'#E5E5E5', borderWidth:3}} onClick={orderLow}> Düşük Fiyata Göre Sırala</button>
  </div>
+
     <CurrencyTableTitle/>
      <CurrencyTable data={data}  searchText={searchText}/>
     <CrossRateTitle/>
